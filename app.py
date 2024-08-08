@@ -32,6 +32,10 @@ st.sidebar.markdown(
 
 # Use selectbox instead of radio for model selection
 selected_model = st.sidebar.selectbox("Select Model", ('Logistic Regression', 'Naive Bayes', 'Random Forest', 'Decision Tree', 'GBC Model'))
+# Download necessary NLTK data
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 # Preprocess email text
 def preprocess_email_text(email_text):
     email_text = str(email_text)

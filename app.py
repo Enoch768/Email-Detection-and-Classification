@@ -7,8 +7,15 @@ import nltk
 from bs4 import BeautifulSoup
 import re
 import string
-# Title and description
 
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+# Title and description
 st.markdown(
     """
     <div style="text-align:center">
